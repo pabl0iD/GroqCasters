@@ -20,8 +20,8 @@ from scipy.io.wavfile import write as write_wav, read as read_wav
 os.environ["SUNO_USE_SMALL_MODELS"] = "True"
 os.environ["SUNO_OFFLOAD_CPU"] = "False"  # We'll try to use GPU first
 
-MALE_VOICE_PRESET = "v2/en_speaker_6"
-FEMALE_VOICE_PRESET = "v2/en_speaker_9"
+MALE_VOICE_PRESET = "v2/pl_speaker_6"
+FEMALE_VOICE_PRESET = "v2/pl_speaker_5"
 
 # Paths for custom voice samples (update these with your actual file paths)
 CUSTOM_MALE_VOICE_PATH = "null"
