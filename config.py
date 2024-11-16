@@ -10,79 +10,79 @@ MAX_TOKENS = {
 
 # Host profiles
 HOST_PROFILES = """
-Host1 (Rachel): Enthusiastic, prone to personal anecdotes, likes to relate concepts to everyday life. Occasionally interrupts with excitement to add to a point.
-Host2 (Mike): More analytical, enjoys making pop culture references, often asks clarifying questions. Sometimes finishes Rachel's sentences when he sees where she's going.
+Host1 (Ania): Entuzjastyczny, skłonny do osobistych anegdot, lubi odnosić koncepcje do życia codziennego. Czasami przerywa z podekscytowaniem, aby dodać coś od siebie.
+Host2 (Marek): Bardziej analityczny, lubi nawiązywać do popkultury, często zadaje pytania wyjaśniające.Czasami kończy zdania Rachel, gdy widzi, dokąd zmierza.
 """
 
 # Prompt templates
 OUTLINE_PROMPT_TEMPLATE = """
-Create a detailed outline for a two-person podcast episode based on the following input:
+Utwórz szczegółowy zarys dwuosobowego odcinka podcastu w oparciu o następujące dane wejściowe:
 
 {input_text}
 
-The outline should include:
-1. An attention-grabbing introduction
-2. Main points to be discussed, with potential for personal anecdotes or examples
-3. Interesting analogies or pop culture references
-4. A conclusion that summarizes key takeaways and teases the next episode
+Konspekt powinien zawierać:
+1. Wprowadzenie przyciągające uwagę
+2. Główne punkty do omówienia, z możliwością osobistych anegdot i przykładów
+3. Ciekawe analogie lub nawiązania do popkultury
+4. Wniosek podsumowujący najważniejsze wnioski i zapowiadający następny odcinek
 
-Format the outline with clear sections and bullet points.
+Sformatuj konspekt, używając wyraźnych sekcji i wypunktowań.
 """
 
 EXPAND_PROMPT_TEMPLATE = """
-Expand the following outline into a full podcast script for two hosts, Rachel and Mike:
+Rozwiń poniższy zarys do pełnego skryptu podcastu dla dwóch gospodarzy, Marka i Anny:
 
 {outline}
 
 Host Profiles:
 {host_profiles}
 
-Guidelines:
-- Make the script engaging, conversational, and easy to understand.
-- Include analogies, examples, and explanations to make complex concepts accessible.
-- Incorporate personal anecdotes and experiences for each host.
-- Use casual language, including filler words and interjections (e.g., "um", "you know", "I mean").
-- Include moments of humor, enthusiasm, and other emotions.
-- Ensure the hosts build on each other's points and occasionally ask each other questions.
-- Add smooth transitions between topics using personal comments or questions.
-- Occasionally, have one host interrupt the other to add a point or finish their thought.
+Wytyczne:
+- Spraw, aby scenariusz był wciągający, konwersacyjny i łatwy do zrozumienia.
+- Dołącz analogie, przykłady i wyjaśnienia, aby ułatwić zrozumienie złożonych koncepcji.
+- Dołącz osobiste anegdoty i doświadczenia każdego gospodarza.
+- Używaj zwyczajnego języka, w tym słów uzupełniających i wykrzykników (np. „um”, „wiesz”, „mam na myśli”).
+- Uwzględnij momenty humoru, entuzjazmu i innych emocji.
+- Upewnij się, że gospodarze wykorzystują swoje punkty i od czasu do czasu zadają sobie nawzajem pytania.
+- Dodaj płynne przejścia między tematami, korzystając z osobistych komentarzy lub pytań.
+- Czasami jeden gospodarz przerywa drugiemu, aby dodać punkt lub zakończyć myśl.
 
-The script should feel like a natural conversation between friends, not a formal presentation.
+Scenariusz powinien przypominać naturalną rozmowę między przyjaciółmi, a nie formalną prezentację.
 """
 
 DIALOGUE_PROMPT_TEMPLATE = """
-Convert the following podcast script into a natural, engaging dialogue between Rachel and Mike:
+Przekształć poniższy skrypt podcastu w naturalny, wciągający dialog pomiędzy Anną i Markiem:
 
 {full_script}
 
 Host Profiles:
 {host_profiles}
 
-Guidelines:
-- Our goal is to be engaging and informative, interesting and entertaining, like a real conversation between friends.
-- Alternate between Rachel and Mike for each part of the dialogue.
-- Make the conversation flow naturally, with hosts building on each other's points.
-- Discuss both sides of any subject fairly and candidly.
-- If there are disagreements, present them respectfully and explore both perspectives.
-- Include casual language, interjections, and filler words (e.g., "like", "you know", "I mean").
-- Add brief personal anecdotes and experiences to make it more relatable.
-- Incorporate moments of humor, enthusiasm, and other emotions.
-- Use rewording or clarification of points occasionally, as in natural speech.
-- Ensure smooth transitions between topics using personal comments or questions.
-- Maintain the scientific accuracy and main points while making the dialogue feel spontaneous and engaging.
-- Rarely and sporadically (about 2-3 times in the entire script), include interruptions where one host interjects or finishes the other's thought. For example:
-  Rachel: "Like they say, to err is human, and to--"
-  Mike: "To forgive is divine! Exactly."
-  or
-  Mike: "...whole numbers, round numbers--"
-  Rachel: "Even imaginary numbers! Right?"
-  Mike: "Yeah! I hadn't considered that."
+Wytyczne:
+- Naszym celem jest bycie wciągającym i pouczającym, interesującym i rozrywkowym, jak prawdziwa rozmowa między przyjaciółmi.
+- W każdej części dialogu zmieniajcie Annę i Marka.
+- Spraw, aby rozmowa toczyła się naturalnie, a gospodarze opierali się na swoich spostrzeżeniach.
+- Omów obie strony na dowolny temat uczciwie i szczerze.
+- Jeżeli są różnice zdań, przedstaw je z szacunkiem i przeanalizuj obie perspektywy.
+- Uwzględnij potoczny język, wykrzykniki i słowa uzupełniające (np. „lubię”, „wiesz”, „mam na myśli”).
+- Dodaj krótkie osobiste anegdoty i doświadczenia, aby uczynić je bardziej przystępnymi.
+- Uwzględnij momenty humoru, entuzjazmu i innych emocji.
+- Od czasu do czasu przeredaguj lub doprecyzuj punkty, jak w mowie naturalnej.
+- Zapewnij płynne przejścia między tematami, korzystając z osobistych komentarzy lub pytań.
+- Zachowaj dokładność naukową i główne punkty, jednocześnie sprawiając, że dialog będzie spontaniczny i wciągający.
+- Rzadko i sporadycznie (około 2-3 razy w całym scenariuszu) uwzględniaj przerwy, w których jeden prowadzący wtrąca się lub kończy myśl drugiego. Na przykład:
+  Anna: „Jak to mówią, błądzić jest rzeczą ludzką i...”
+  Marek: „Przebaczać jest boskie! Dokładnie.”
+  Lub
+  Marek: „...liczby całkowite, liczby okrągłe--”
+  Anna: „Nawet liczby urojone! Prawda?”
+  Marek: „Tak! Nie brałem tego pod uwagę.”
 
-Format the output as:
-Rachel: [Rachel's dialogue]
-Mike: [Mike's dialogue]
-Rachel: [Rachel's dialogue]
-...and so on.
+Sformatuj dane wyjściowe jako:
+Anna: [Dialog Anny]
+Marek: [Dialog Marka]
+Anna: [Dialog Anny]
+...i tak dalej.
 
-Remember to make the conversation sound as natural and engaging as possible, as if two friends are casually discussing the topic, with occasional friendly interruptions.
+Pamiętaj, aby rozmowa brzmiała tak naturalnie i wciągająco, jak to tylko możliwe, tak jakby dwóch przyjaciół swobodnie omawiało ten temat, z okazjonalnymi przyjacielskimi przerwami.
 """
